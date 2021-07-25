@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import { Container, Row, Table, Image } from 'react-bootstrap';
 import WalletService from '../../services/WalletService'
+import StorageType from "./components/StorageType";
 
 
 const Wallets = () => {
@@ -57,6 +58,15 @@ const Wallets = () => {
                                             <a href={item.website_url} className="text-dark" target="_blank" rel="noreferrer">
                                                 {item.name}
                                             </a>
+                                        </td>
+                                        <td>
+                                            {item.wallet_type}
+                                        </td>
+                                        <td>
+                                            Hot
+                                        </td>
+                                        <td>
+                                            Linux
                                         </td>
                                     </tr>
                                 </tbody>
