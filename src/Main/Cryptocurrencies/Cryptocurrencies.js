@@ -1,7 +1,7 @@
 import './Cryptocurrencies.css'
 import { useEffect, useState } from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
-import { Container, Row, Table, Image } from 'react-bootstrap';
+import { Container, Row, Table } from 'react-bootstrap';
 import CryptoCurrencyService from '../../services/CryptoCurrencyService'
 
 
@@ -16,7 +16,7 @@ const Cryptocurrencies = () => {
     const retrieveAllCurrencies = async () => {
         try {
             const response = await CryptoCurrencyService.getAll()
-            setCurrencies(response.data.results)
+            setCurrencies(response.data.cryptocurrencies)
         } catch (err) {
             console.log(err)
         }
@@ -52,10 +52,10 @@ const Cryptocurrencies = () => {
 
                         {currencies &&
                             currencies.map((item, index) =>
-                                <tbody>
+                                <tbody key="{item.index}-{item.name}">
                                     <tr>
                                         <td>{index + 1}</td>
-                                        <td><Image src={item.logo} width="38" roundedCircle /> {item.name}</td>
+                                        <td>{item.name}</td>
                                     </tr>
                                 </tbody>
                             )

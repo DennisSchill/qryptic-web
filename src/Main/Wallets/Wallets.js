@@ -16,7 +16,7 @@ const Wallets = () => {
     const retrieveAllWallets = async () => {
         try {
             const response = await WalletService.getAll()
-            setWallets(response.data.results)
+            setWallets(response.data.wallets)
         } catch (err) {
             console.log(err)
         }
@@ -54,14 +54,10 @@ const Wallets = () => {
                                     <tr>
                                         <td>{index + 1}</td>
                                         <td>
-                                            <Image src={item.logo_medium} height="67" />
-                                            <a href={item.website} className="text-dark"    target="_blank" rel="noreferrer">
+                                            <a href={item.website_url} className="text-dark" target="_blank" rel="noreferrer">
                                                 {item.name}
                                             </a>
                                         </td>
-                                        <td>{item.type}</td>
-                                        <td>{item.storage}</td>
-                                        <td>{item.platform}</td>
                                     </tr>
                                 </tbody>
                             )

@@ -1,7 +1,7 @@
 import './Exchanges.css'
 import { useEffect, useState } from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
-import { Container, Row, Table, Image } from 'react-bootstrap';
+import { Container, Row, Table } from 'react-bootstrap';
 import ExchangeService from '../../services/ExchangeService'
 
 
@@ -16,7 +16,7 @@ const Exchanges = () => {
     const retrieveAllExchanges = async () => {
         try {
             const response = await ExchangeService.getAll()
-            setExchanges(response.data.results)
+            setExchanges(response.data.exchanges)
         } catch (err) {
             console.log(err)
         }
@@ -41,8 +41,9 @@ const Exchanges = () => {
                         <Table hover className="cc-table">
                         <thead>
                             <tr>
-                            <th>#</th>
-                            <th>Name</th>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
 
@@ -52,10 +53,12 @@ const Exchanges = () => {
                                     <tr>
                                         <td>{index + 1}</td>
                                         <td>
-                                            <Image src={item.logo_medium} height="67" />
-                                            <a href={item.website} className="text-dark" target="_blank" rel="noreferrer">
+                                            <a href={item.website_url} className="text-dark" target="_blank" rel="noreferrer">
                                                 {item.name}
                                             </a>
+                                        </td>
+                                        <td>
+                                            {item.description}
                                         </td>
                                     </tr>
                                 </tbody>

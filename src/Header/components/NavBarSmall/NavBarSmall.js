@@ -20,7 +20,7 @@ const NavBarSmall = () => {
   const retrieveAmountOfCurrencies = async () => {
       try {
           const response = await CryptoCurrencyService.getAll()
-          setAmountCurrencies(response.data.count)
+          setAmountCurrencies(response.data.totalItems)
       } catch (err) {
           console.log(err)
       }
@@ -29,7 +29,7 @@ const NavBarSmall = () => {
   const retrieveAmountOfExchanges = async () => {
     try {
         const response = await ExchangeService.getAll()
-        setAmountExchanges(response.data.count)
+        setAmountExchanges(response.data.totalItems)
     } catch (err) {
         console.log(err)
     }
@@ -38,7 +38,7 @@ const NavBarSmall = () => {
   const retrieveAmountOfWallets = async () => {
     try {
         const response = await WalletService.getAll()
-        setAmountWallets(response.data.count)
+        setAmountWallets(response.data.totalItems)
     } catch (err) {
         console.log(err)
     }

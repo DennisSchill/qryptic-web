@@ -1,10 +1,10 @@
 import './Start.css'
 import { useEffect, useState } from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
-import { Container, Row, Image, Table } from 'react-bootstrap';
+import { Container, Row, Table } from 'react-bootstrap';
 import CryptoCurrencyService from '../../services/CryptoCurrencyService'
-import PriceData from '../components/PriceData'
-import PriceChange24Hours from '../components/PriceChange24Hours'
+// import PriceData from '../components/PriceData'
+// import PriceChange24Hours from '../components/PriceChange24Hours'
 
 
 const Start = () => {
@@ -18,7 +18,7 @@ const Start = () => {
     const getAllCurrencies = async () => {
         try {
             const response = await CryptoCurrencyService.getAll()
-            setCurrencies(response.data.results)
+            setCurrencies(response.data.cryptocurrencies)
         } catch (err) {
             console.log(err)
         }
@@ -48,12 +48,10 @@ const Start = () => {
 
                         {currencies &&
                             currencies.map((item, index) =>
-                                <tbody>
+                                <tbody key="{item.index}-{item.name}">
                                     <tr>
                                         <td>{index + 1}</td>
-                                        <td><Image src={item.logo} width="38" roundedCircle /> {item.name}</td>
-                                        <td><PriceData ticker={item.ticker}/></td>
-                                        <td><PriceChange24Hours ticker={item.ticker}/></td>
+                                        <td>{item.name}</td>
                                     </tr>
                                 </tbody>
                             )
