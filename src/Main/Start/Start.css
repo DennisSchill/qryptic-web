@@ -1,0 +1,14 @@
+.cc-container {
+    margin-top: 50px;
+}
+
+.cc-table thead th {
+    font-size: 95%;
+    font-weight: 500;
+    border-bottom: 0;
+}
+
+.cc-table tbody td {
+    font-size: 95%;
+    color: var(--text-secondary)
+}

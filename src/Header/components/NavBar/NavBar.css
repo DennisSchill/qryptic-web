@@ -1,0 +1,18 @@
+.cs-navbar {
+    height: 70px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .navbar-brand {
+    margin-right: 1.5em;
+  }
+  
+  .cs-navbar .nav-link {
+    font-size: 95%;
+    font-weight: 500;
+  }
+  
+  .nav-button {
+    font-size: 95%;
+    font-weight: 500;
+  }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-dark: #009430;
+  --primary-darker: #006f23;
+  --primary-light: #00d142;
+  --background-dark: #e7e7e7;
+  --background-light: #ffffff;
+  --text-primary: #728393;
+  --text-secondary: #212529;
+  --border-dark: #c2c2c2;
+  --border-light: #ececec;
+  --button-primary: #1d1d1d;
+  --button-hover: #353535;
+  --button-click: #5a5a5a;
+  --button-light: var(--background-light);
+  --select-arrow: #009430;
+}
+
+h1 {
+  font-size: 200%;
+  padding-bottom: 1em;
+}
+
+h2 {
+  font-size: 150%;
+  padding-bottom: 1em;
+}
+
+h3 {
+  font-size: 125%;
+  padding-bottom: 1em;
+}
+
+.table tbody+tbody {
+  border-top: 1px solid #dee2e6;
+}
+
+.table td {
+  vertical-align: middle;
+}

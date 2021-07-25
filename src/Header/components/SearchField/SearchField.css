@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.SearchField {
+  height: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  grid-area: search;
+}
+
+@media screen and (max-width: 1200px) {
+  .SearchField {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .SearchField {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.SearchField input {
+  box-sizing: border-box;
+  border: 1px solid;
+  border-color: var(--border-light);
+  border-radius: 4px;
+  width: calc(100% - 150px);
+  height: 40px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+}
+
+.SearchField select:focus {
+  outline: none;
+}
+
+.SearchField input:focus {
+  outline: none;
+}
+
+.SelectBox {
+  height: 40px;
+  width: 150px;
+  min-width: 150px;
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-light);
+  border-right: 0px;
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.SelectBox::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  margin-top: -2px;
+  background-color: #000;
+  clip-path: polygon(80% 50%, 100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%);
+  justify-self: end;
+}
+
+.SelectBox select {
+  appearance: none;
+  background-color: var(--background-dark);
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  padding-left: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.SelectBox select option {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+}
+
+.SelectBox select,
+.SelectBox:after {
+  grid-area: select;
+}
+
+.SelectBox:after {
+  justify-self: end;
+}
+
+.SearchField button {
+  box-sizing: border-box;
+  height: 40px;
+}
