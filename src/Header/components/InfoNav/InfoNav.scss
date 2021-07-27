@@ -1,0 +1,16 @@
+.InfoNav {
+  background-color: #f8f9fa;
+  .pCurrencie {
+    display: inline;
+    padding-right: 10px;
+  }
+
+  .aCurrencie {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
