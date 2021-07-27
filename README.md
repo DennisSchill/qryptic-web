@@ -36,6 +36,8 @@ Marcus Cvjeticanin - [@mjovanc](https://github.com/mjovanc)
 Tommy Nguyen - [@TommyNguyen95](https://github.com/TommyNguyen95)
 \
 Rijad Hamula - [@zbettmen](https://github.com/zbettmen)
+\
+Ante Hellgren - [@anthel](https://github.com/anthel)
 
 ## License
 
