@@ -1,15 +1,14 @@
-import './Header.css'
-import NavBar from './components/NavBar'
-import NavBarSmall from './components/NavBarSmall'
+import './Header.css';
+import NavBar from './components/NavBar';
+import InfoNav from './components/InfoNav';
 
 const Header = () => {
-
-  return(
+  return (
     <div className="Header">
+      <InfoNav />
       <NavBar />
-      <NavBarSmall />
-  </div>
-  )
-}
-  
-export default Header
+    </div>
+  );
+};
+
+export default Header;
