@@ -1,9 +1,9 @@
-# CoinShark Web
+# Qryptic Web
 
 ## About
-CoinShark Web to interact with CoinShark API. Built with React.
+Qryptic Web to interact with Qryptic API. Built with React.
 
-This project is an implementation with the [CoinShark API](https://github.com/mjovanc/coinshark).
+This project is an implementation with the [Qryptic API](https://github.com/mjovanc/qryptic).
 
 ## Technologies
 
