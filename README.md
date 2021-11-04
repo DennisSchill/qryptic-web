@@ -32,12 +32,6 @@ ETH: 0x03A049028B673Cc5EF676695f442eC5614877335
 ## Contributors
 
 Marcus Cvjeticanin - [@mjovanc](https://github.com/mjovanc)
-\
-Tommy Nguyen - [@TommyNguyen95](https://github.com/TommyNguyen95)
-\
-Rijad Hamula - [@zbettmen](https://github.com/zbettmen)
-\
-Ante Hellgren - [@anthel](https://github.com/anthel)
 
 ## License
 
