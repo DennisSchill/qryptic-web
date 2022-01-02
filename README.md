@@ -1,5 +1,7 @@
 # Qryptic Web
 
+![alt text](qryptic-logo.png "Qryptic")
+
 ## About
 Qryptic Web to interact with Qryptic API. Built with React.
 
@@ -7,10 +9,14 @@ This project is an implementation with the [Qryptic API](https://github.com/mjov
 
 ## Technologies
 
-This application are using:
+This application is built using:
 
 - React
 - Yarn
+
+## How to use
+
+Todo...
 
 ## Contribute
 
