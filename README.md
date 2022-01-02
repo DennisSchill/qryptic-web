@@ -27,7 +27,17 @@ If you would like to contribute to this project there is two ways:
 
 ### Pull request
 
-More info will be added here shortly.
+We appreciate all contributions whether it be small changes such as documentation of source code to major improvement of code. The easiest way is to make a fork and then make a pull request into our develop branch. To make the PR go through make sure to include this information:
+
+```
+What does this PR do?
+
+Why are these changes required?
+
+This PR has been tested using (e.g. Unit Tests, Manual Testing):
+
+Extra details?
+```
 
 ### Donate
 
