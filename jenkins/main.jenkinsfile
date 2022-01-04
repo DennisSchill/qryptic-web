@@ -1,0 +1,64 @@
+// Initialize a LinkedHashMap / object to share between stages
+def pipelineContext = [:]
+
+pipeline {
+    agent {
+        node {
+            label 'qryptic'
+        }
+    }
+
+    /* environment {
+        DOCKER_IMAGE_TAG = "mjovanc/qryptic:0.0.1-RELEASE"
+    } */
+    
+    stages {
+        stage('Clean') {
+            steps {
+                echo 'Cleaning leftovers from previous builds'
+                sh "chmod +x -R ${env.WORKSPACE}"
+                sh './gradlew clean'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building React'
+            }
+        }
+
+        stage('Static Code Analysis') {
+            steps {
+                echo 'Static Code Analysis'
+            }
+        }
+
+        stage('Unit Test') {
+            steps {
+                echo 'Running all unit tests'
+            }
+        }
+
+        stage('Coverage Test') {
+            steps {
+                echo 'Running Coverage Test'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    echo 'Building Docker Image'
+                }
+            }
+        }
+
+        stage('Publish Docker Image') {
+            steps {
+                echo 'Publish Docker Image to Artifactory'
+            }
+        }
+        
+        /* ADD DOWNSTREAM HERE TO INFRA JENKINSFILE TO RUN */
+    }
+}
