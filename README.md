@@ -47,7 +47,7 @@ ETH: 0x03A049028B673Cc5EF676695f442eC5614877335
 
 ## Contributors
 
-Marcus Cvjeticanin - [@mjovanc](https://github.com/mjovanc)
+Marcus Cvjeticanin - [@mjovanc](https://github.com/mjovanc)\
 Dennis Demir - [@DennisDemir24](https://github.com/DennisDemir24)
 
 ## License
