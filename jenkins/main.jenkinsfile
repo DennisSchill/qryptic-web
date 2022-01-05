@@ -8,6 +8,8 @@ pipeline {
         }
     }
 
+    // Need to install Yarn globally on Jenkins server? Dockerfile in jcasc?
+
     /* environment {
         DOCKER_IMAGE_TAG = "mjovanc/qryptic:0.0.1-RELEASE"
     } */
@@ -17,7 +19,6 @@ pipeline {
             steps {
                 echo 'Cleaning leftovers from previous builds'
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh './gradlew clean'
             }
         }
 
